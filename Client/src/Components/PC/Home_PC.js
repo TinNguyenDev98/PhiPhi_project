@@ -10,25 +10,6 @@ function Home_PC() {
     let content = useRef(null);
     let _scale = 0;
     useEffect(() => {
-        // const loadDataFirst = async ($mainDiv, $total) => {
-        //     //create box picture
-        //     const item = $total;
-        //     // for (let i = 0; i < item; i++){
-        //         // var divBox = document.createElement('div');
-        //         // divBox.setAttribute("className", 'box');
-        //         // divBox.setAttribute("id", 'box' + i);
-        //         // listen event server send image from user
-        //         socket.on("server-send-danhsach-img", function (data) {
-        //             data.forEach(function(i){
-        //                 $($mainDiv).append( '<div className="box">' +
-        //                                         '<img src="'+ i + '" />' +
-        //                                     '</div>'
-        //                                 );
-        //             });
-        //         });
-        //         // $($mainDiv).append([divBox]);
-        //     // }
-        // }
         // catch Event User register
         socket.on("server-send-danhsach-Users", function(data){
             $("#userContent").html("");
@@ -40,17 +21,14 @@ function Home_PC() {
         // listen event server send image from user
         socket.on("server-send-danhsach-img", function (data) {
             // console.log(data)
-                $(".box").html("");
-                $(".box").append('<img src="'+ data + '" />')
-                // $(".box_container").append( '<div className="box">' +
-                //                                 '<img src="'+ data + '" />' +
-                //                              '</div>'
-                //                         );
+            // for(let i = 1; i < 51; i++){
+            $(".box").append('<img src="'+ data + '" />')
+            // }
         });
 
-        // //content vars
+        //content vars
         var arrBox = [];
-         arrBox.push(content.children[0]);
+        arrBox.push(content.children[0]);
         for ( let i = 1; i < 50; i++ ){
             arrBox.push(arrBox[i - 1].nextSibling);
         }
@@ -154,60 +132,60 @@ function Home_PC() {
                 Xin<br/>
             </div>
             <div className="box_container" ref={el => content = el}>
-                    <div className="box">1</div>
-                    <div className="box">2</div>
-                    <div className="box">3</div>
-                    <div className="box">4</div>
-                    <div className="box">5</div>
-                    <div className="box">6</div>
-                    <div className="box">7</div>
-                    <div className="box">8</div>
-                    <div className="box">9</div>
-                    <div className="box">10</div>
+                <div className="box" id="box1">1</div>
+                <div className="box" id="box2">2</div>
+                <div className="box" id="box3">3</div>
+                <div className="box" id="box4">4</div>
+                <div className="box" id="box5">5</div>
+                <div className="box" id="box6">6</div>
+                <div className="box" id="box7">7</div>
+                <div className="box" id="box8">8</div>
+                <div className="box" id="box9">9</div>
+                <div className="box" id="box10">10</div>
 
-                    <div className="box">11</div>
-                    <div className="box">12</div>
-                    <div className="box">13</div>
-                    <div className="box">14</div>
-                    <div className="box">15</div>
-                    <div className="box">16</div>
-                    <div className="box">17</div>
-                    <div className="box">18</div>
-                    <div className="box">19</div>
-                    <div className="box">20</div>
+                <div className="box" id="box11">11</div>
+                <div className="box" id="box12">12</div>
+                <div className="box" id="box13">13</div>
+                <div className="box" id="box14">14</div>
+                <div className="box" id="box15">15</div>
+                <div className="box" id="box16">16</div>
+                <div className="box" id="box17">17</div>
+                <div className="box" id="box18">18</div>
+                <div className="box" id="box19">19</div>
+                <div className="box" id="box20">20</div>
 
-                    <div className="box">21</div>
-                    <div className="box">22</div>
-                    <div className="box">23</div>
-                    <div className="box">24</div>
-                    <div className="box">25</div>
-                    <div className="box">26</div>
-                    <div className="box">27</div>
-                    <div className="box">28</div>
-                    <div className="box">29</div>
-                    <div className="box">30</div>
+                <div className="box" id="box21">21</div>
+                <div className="box" id="box22">22</div>
+                <div className="box" id="box23">23</div>
+                <div className="box" id="box24">24</div>
+                <div className="box" id="box25">25</div>
+                <div className="box" id="box26">26</div>
+                <div className="box" id="box27">27</div>
+                <div className="box" id="box28">28</div>
+                <div className="box" id="box29">29</div>
+                <div className="box" id="box30">30</div>
 
-                    <div className="box">31</div>
-                    <div className="box">32</div>
-                    <div className="box">33</div>
-                    <div className="box">34</div>
-                    <div className="box">35</div>
-                    <div className="box">36</div>
-                    <div className="box">37</div>
-                    <div className="box">38</div>
-                    <div className="box">39</div>
-                    <div className="box">40</div>
+                <div className="box" id="box31">31</div>
+                <div className="box" id="box32">32</div>
+                <div className="box" id="box33">33</div>
+                <div className="box" id="box34">34</div>
+                <div className="box" id="box35">35</div>
+                <div className="box" id="box36">36</div>
+                <div className="box" id="box37">37</div>
+                <div className="box" id="box38">38</div>
+                <div className="box" id="box39">39</div>
+                <div className="box" id="box40">40</div>
 
-                    <div className="box">41</div>
-                    <div className="box">42</div>
-                    <div className="box">43</div>
-                    <div className="box">44</div>
-                    <div className="box">45</div>
-                    <div className="box">46</div>
-                    <div className="box">47</div>
-                    <div className="box">48</div>
-                    <div className="box">49</div>
-                    <div className="box">50</div>
+                <div className="box" id="box41">41</div>
+                <div className="box" id="box42">42</div>
+                <div className="box" id="box43">43</div>
+                <div className="box" id="box44">44</div>
+                <div className="box" id="box45">45</div>
+                <div className="box" id="box46">46</div>
+                <div className="box" id="box47">47</div>
+                <div className="box" id="box48">48</div>
+                <div className="box" id="box49">49</div>
+                <div className="box" id="box50">50</div>
             </div>
         </div>
     );

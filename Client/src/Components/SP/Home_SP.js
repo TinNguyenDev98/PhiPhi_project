@@ -40,23 +40,23 @@ function Home_SP() {
             reader.readAsDataURL(file);
         });
     });
-   return (
-     <div id="wrapper_sp">
-        <form>
-            <h1>What's your name ?</h1>
-            <input type="text" id="txtUsername"/>
-        </form>
-         <div id="success">
-             <h2 >Đăng ký thành công</h2>
-             <input id="file" type="file" accept="image/*"/>
-             <button id="file_upload">Upload</button>
-             <div id="show_img">
-                 <img src="" alt="bla bla bla" id="picture"/>
-             </div>
-         </div>
+    return (
+        <div id="wrapper_sp">
+            <form>
+                <h1>What's your name ?</h1>
+                <input type="text" id="txtUsername"/>
+            </form>
+            <div id="success">
+                <h2 >Đăng ký thành công</h2>
+                <input id="file" type="file" accept="image/*"/>
+                <button id="file_upload">Upload</button>
+                <div id="show_img">
+                    <img src="" alt="bla bla bla" id="picture"/>
+                </div>
+            </div>
 
-     </div>
-   );
+        </div>
+    );
 }
 
 export default Home_SP;
