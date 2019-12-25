@@ -7,10 +7,10 @@ const PORT = process.env.PORT || 5000;
 server.listen(PORT, () => console.log(`Listen on *: ${PORT}`));
 
 var arrUsers = [];
-var arrImgs = [];
+// var arrImgs = [];
 io.on("connection", socket => {
     const { id } = socket.client;
-    console.log(`User connected: ${id}`);
+    // console.log(`User connected: ${id}`);
     socket.on("client-send-Username", function(data){
         // bat truong hop bi trung USername
         if(arrUsers.indexOf(data) >= 0){
@@ -25,7 +25,7 @@ io.on("connection", socket => {
     });
     socket.on("user-send-img", function (data) {
         // console.log(data)
-        arrImgs.push(data);
-        io.sockets.emit("server-send-danhsach-img", arrImgs);
+        // arrImgs.push(data);
+        io.sockets.emit("server-send-danhsach-img", data);
     });
 })

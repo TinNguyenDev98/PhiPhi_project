@@ -5,6 +5,7 @@ import io from "socket.io-client";
 
 const socket = io.connect("http://localhost:5000");
 function Home_SP() {
+    var arrImgs = [];
     useEffect( () => {
         $("form").show();
         $("#success").hide();
@@ -31,10 +32,11 @@ function Home_SP() {
             var reader = new FileReader();
             reader.onload = function(evt) {
                 var img = evt.target.result;
-                $('#picture').css("display","block");
-                $('#picture').attr('src', img);
+                arrImgs.push(img)
+                console.log(arrImgs);
+                $('#show_img').append('<img src="'+ img + '" />')
                 $("#file_upload").on("click" , function () {
-                    socket.emit("user-send-img", img);
+                    socket.emit("user-send-img", arrImgs);
                 });
             };
             reader.readAsDataURL(file);
@@ -51,7 +53,6 @@ function Home_SP() {
                 <input id="file" type="file" accept="image/*"/>
                 <button id="file_upload">Upload</button>
                 <div id="show_img">
-                    <img src="" alt="bla bla bla" id="picture"/>
                 </div>
             </div>
 

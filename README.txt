@@ -1,3 +1,8 @@
 Start Project:
-- cd folder Server
-- Type the command : " npm run dev "
+# Install dependencies server/client
+npm install
+cd client
+npm install
+
+# Serve on localhost:3000
+npm run dev
